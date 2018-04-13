@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker: 
-    - image: gcr.io/ichikawa-x/quickstart-image:tag1
+      - image: gcr.io/ichikawa-x/quickstart-image:tag1
         auth:
           username: _json_key
           password: $GCR_CREDS
