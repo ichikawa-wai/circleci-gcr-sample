@@ -1,8 +1,11 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.4.1
+    docker: 
+    - image: gcr.io/ichikawa-x/quickstart-image:tag1
+        auth:
+          username: _json_key
+          password: $GCR_CREDS
     steps:
       - checkout
       - run: echo "A first hello"
